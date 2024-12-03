@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      // Nomer 1
+      title: 'Yuma Rakha Samodra Sikayo',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
@@ -30,18 +31,28 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class StreamHomePage extends StatefulWidget(
+class StreamHomePage extends StatefulWidget{
   const StreamHomePage({super.key});
   
   @override 
   State<StreamHomePage> createState()=>_StreamHomePageState();
-)
+}
 
 class _StreamHomePageState extends State<StreamHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container();
   }
+}
+
+Stream<Color> getColors() async* {
+  final colorStream = ColorStream();  
+  yield* Stream.periodic(
+    const Duration(seconds: 1), (int t) {
+      int index = t % colorStream.colors.length;  
+      return colorStream.colors[index];
+    },
+  );
 }
 
 class MyHomePage extends StatefulWidget {
