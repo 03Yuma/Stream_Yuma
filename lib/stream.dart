@@ -8,6 +8,7 @@ class ColorStream {
     Colors.deepPurple,
     Colors.lightBlue,
     Colors.teal,
+    // Jawaban Nomer 2
     Colors.blue,
     Colors.red,
     Colors.lightBlue,
@@ -20,7 +21,7 @@ class ColorStream {
       int index = t % colors.length;
       return colors[index];
     });
-
+    // jawaban Nomer 3
     // fungsi dari yield adalah untuk menghasilkan nilai dari fungsi generator secara berurutan
   }
 }

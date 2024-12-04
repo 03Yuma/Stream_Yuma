@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // Jawaban Nomer 1
       title: 'Yuma',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple, // Tema warna utama aplikasi.
+        primarySwatch: Colors.deepBlue,
       ),
       home: const StreamHomePage(),
     );
@@ -47,6 +48,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
       });
     });
   }
+
+  // jawaban nomer 5
+  // listen = digunakan untuk subscribe ke sebuha stream  dan dapat memberikan callbavk
+  // await for = digunakan dalam loop async secara sinkron menangani dari sebuah elemen
 
   void stopStream() {
     numberStreamController.close();
